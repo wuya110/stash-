@@ -1,0 +1,28 @@
+name: "哈罗单车奖励金签到"
+desc: "在支付宝小程序打开哈罗单车获取cookie"
+
+http:
+
+  mitm:
+    - "api.hellobike.com"
+
+  script:
+
+    - match: ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo
+      name: "哈罗单车奖励金签到"
+      type: request
+      require-body: true
+      script: hldc.js
+      timeout: 10
+
+cron:
+  script:
+
+    - name: "哈罗单车奖励金签到"
+      cron: "11 0 * * *"
+      timeout: 60
+
+script-providers:
+  "哈罗单车奖励金签到":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/hldc.js
+    interval: 86400
