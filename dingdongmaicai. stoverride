@@ -1,0 +1,14 @@
+name: "叮咚买菜"
+desc: "叮咚买菜自动签到"
+
+cron:
+  script:
+
+    - name: "dingdong_checkin_0"
+      cron: "8 0 * * *"
+      timeout: 60
+
+script-providers:
+  "dingdong_checkin_0":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+    interval: 86400
