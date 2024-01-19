@@ -1,0 +1,25 @@
+name: "阿里云盘签到"
+desc: "进入阿里云盘可直接获取cookie "
+
+http:
+
+  mitm:
+    - "auth.alipan.com"
+
+  script:
+
+    - match: https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token
+      name: "阿里云盘签到cookie_9"
+      type: response
+      require-body: true
+
+cron:
+  script:
+
+    - name: "阿里云盘签到cookie_9"
+      cron: "0 10 0 * * ?"
+
+script-providers:
+  "阿里云盘签到cookie_9":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+    interval: 86400
