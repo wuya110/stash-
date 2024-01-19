@@ -1,0 +1,33 @@
+name: "腕表之家签到"
+desc: "进APP，切换到【我】，可获得cookie，可反复切换获取"
+
+http:
+
+  mitm:
+    - "*.xbiao.com"
+
+  script:
+
+    - match: ^https:\/\/\w+\.xbiao\.com\/apps\/\w+/.+\/home\/center/$
+      name: "wbzj_6"
+      type: request
+      timeout: 60
+
+cron:
+  script:
+
+    - name: "wbzj_6"
+      cron: "1 0 * * *"
+      timeout: 60
+
+    - name: "dingdong_checkin_20"
+      cron: "8 0 * * *"
+      timeout: 60
+
+script-providers:
+  "wbzj_6":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/wbzj.js
+    interval: 86400
+  "dingdong_checkin_20":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+    interval: 86400
