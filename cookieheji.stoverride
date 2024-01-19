@@ -1,0 +1,920 @@
+name: "fmz200获取cookie合集"
+desc: "整合大部分获取cookie的配置stash版，获取cookie后禁用该配置"
+author: "fmz200"
+date: "2023-12-02 19:35:00"
+
+http:
+
+  mitm:
+    - "clientaccess.10086.cn"
+    - "wapside.189.cn"
+    - "superapp.kiwa-tech.com"
+    - "activity-1.m.duiba.com.cn"
+    - "m.ximalaya.com"
+    - "operation-api.jimistore.com"
+    - "apiwz.midukanshu.com"
+    - "api.1sapp.com"
+    - "frodo.douban.com"
+    - "luckman.suning.com"
+    - "passport.suning.com"
+    - "sign.suning.com"
+    - "gameapi.suning.com"
+    - "m.ctrip.com"
+    - "110.43.90.61"
+    - "zt.wps.cn"
+    - "m-bean.kaola.com"
+    - "daojia.jd.com"
+    - "app.nio.com"
+    - "wxprdapplet.gac-nio.com"
+    - "node.kg.qq.com"
+    - "api.dushu.io"
+    - "pm.m.fenqile.com"
+    - "maicai.api.ddxq.mobi"
+    - "group.baicizhan.com"
+    - "api.everphoto.cn"
+    - "i.meituan.com"
+    - "promotion.waimai.meituan.com"
+    - "wx.10086.cn"
+    - "www.maomicd.com"
+    - "m.client.10010.com"
+    - "act.10010.com"
+    - "api-takumi.mihoyo.com"
+    - "m.gdoil.cn"
+    - "credits.bz.mgtv.com"
+    - "*.csdn.net"
+    - "*.acfun.cn"
+    - "apk.tw"
+    - "*.bilibili.com"
+    - "api.dongqiudi.com"
+    - "*.feng.com"
+    - "www.flyertea.com"
+    - "music.163.com"
+    - "*.m.163.com"
+    - "user.qunar.com"
+    - "*.rr.tv"
+    - "sf-integral-sign-in.weixinjia.net"
+    - "mcs-mimp-web.sf-express.com"
+    - "*.smzdm.com"
+    - "tieba.baidu.com"
+    - "*.v2ex.com"
+    - "*.video.qq.com"
+    - "mobwsa.ximalaya.com"
+    - "*.you.163.com"
+    - "*.rrys2020.com"
+    - "ios.zmzapi.com"
+    - "ifac*.iqiyi.com"
+    - "www.52pojie.cn"
+    - "api.m.jd.com"
+    - "passport.biligame.com"
+    - "c.tieba.baidu.com"
+    - "api.kkmh.com"
+    - "h5.youzan.com"
+    - "glados.rocks"
+    - "api.weibo.cn"
+    - "www.baimaa.com"
+    - "ph0001.hezyq.com"
+    - "wq.02gk.com"
+    - "we7.ivee.top"
+    - "as.xiaojukeji.com"
+    - "proapi.115.com"
+    - "webapi.qmai.cn"
+    - "teacherapi.zmlearn.com"
+    - "h5.bianlifeng.com"
+    - "mall.oclean.com"
+    - "m.weibo.cn"
+    - "api.xiaoheihe.cn"
+    - "cloud.umetrip.com"
+    - "weather-data.apple.com"
+    - "api.weather.com"
+    - "app*.jegotrip.com.cn"
+    - "task.jegotrip.com.cn"
+    - "api.umer.com.cn"
+    - "huiyuan.163.com"
+    - "geekhub.com"
+    - "cxdng.cpic.com.cn"
+    - "*.xmcimg.com"
+    - "proxy.vac.qq.com"
+    - "yuba.douyu.com"
+    - "qqpet.jwetech.com"
+    - "draw.jdfcloud.com"
+    - "jdjoy.jd.com"
+    - "www.cuuc.club"
+    - "m.xiaomiyoupin.com"
+    - "hongbao.youzikuaibao.com"
+    - "jdread-api.jd.com"
+    - "getconfig-globalapi.zymk.cn"
+    - "wox2019.woxshare.com"
+    - "appsmall.rtmap.com"
+    - "choujiang-server.deering.cn"
+    - "api.momosyb.com"
+    - "*.zhuishushenqi.com"
+    - "shop42867343.youzan.com"
+    - "studygolang.com"
+    - "sports.lifesense.com"
+    - "i.snssdk.com"
+    - "is.snssdk.com"
+    - "weibo.com"
+    - "h5.ele.me"
+    - "m.ctrp.com"
+    - "*.ctrp.com"
+    - "m.elong.com"
+    - "activity.m.duiba.com.cn"
+    - "icbc1.wlphp.com"
+    - "cn.exflux.io"
+    - "ms.jr.id.com"
+    - "wx.17u.cn"
+    - "api.tuhu.cn"
+    - "lkyl.dianpusoft.cn"
+    - "ios.baertt.com"
+    - "*.youth.cn"
+    - "youhui.95516.com"
+    - "mqqapi.reader.qq.com"
+    - "api.cashtoutiao.com"
+    - "alipaymini.189.cn"
+    - "ms.jr.jd.com"
+    - "me-api.jd.com"
+
+  script:
+
+    - match: ^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm
+      name: "中国联通_15"
+      type: request
+
+    - match: ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign
+      name: "中国联通_15"
+      type: request
+
+    - match: ^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo)
+      name: "中国联通_15"
+      type: request
+
+    - match: ^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo
+      name: "中国电信_18"
+      type: request
+      require-body: true
+
+    - match: ^https?:\/\/tieba\.baidu\.com\/?.?
+      name: "百度签到(网页)_19"
+      type: request
+
+    - match: ^https:\/\/music.163.com\/weapi\/user\/level
+      name: "网易云音乐_20"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/www\.smzdm\.com\/?.?
+      name: "什么值得买_21"
+      type: request
+
+    - match: ^https:\/\/www\.v2ex\.com\/mission\/daily
+      name: "V2ex_22"
+      type: request
+
+    - match: ^https:\/\/(www|live)\.bilibili\.com\/?.?
+      name: "哔哩哔哩_23"
+      type: request
+
+    - match: ^https:\/\/(www\.)?feng\.com\/?.?
+      name: "威锋论坛_24"
+      type: request
+
+    - match: ^https:\/\/access.video.qq.com\/user\/auth_refresh
+      name: "腾讯视频_25"
+      type: request
+
+    - match: ^https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo
+      name: "AcFun_26"
+      type: request
+
+    - match: ^https?:\/\/(www\.)?rrys2020\.com\/?.?
+      name: "字幕组_27"
+      type: request
+
+    - match: ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login
+      name: "字幕组_27"
+      type: request
+
+    - match: ^https?:\/\/.*\/mobile\-user\/homePage\/.*
+      name: "喜马拉雅_29"
+      type: request
+
+    - match: ^https:\/\/api\.rr\.tv\/user\/profile
+      name: "人人视频_30"
+      type: request
+
+    - match: ^https:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=getData&.*
+      name: "飞客茶馆_31"
+      type: request
+
+    - match: ^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index
+      name: "顺丰速运_32"
+      type: request
+
+    - match: ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect
+      name: "顺丰速运_32"
+      type: request
+
+    - match: ^https:\/\/api\.dongqiudi\.com\/v2\/user\/is_login
+      name: "懂球帝_35"
+      type: request
+
+    - match: ^https:\/\/m\.you\.163\.com\/xhr\/points\/index\.json
+      name: "网易严选_36"
+      type: request
+
+    - match: ^https:\/\/apk\.tw\/?.?
+      name: "APK.TW_37"
+      type: request
+
+    - match: ^https:\/\/user.qunar.com\/webapi\/member\/signIndexV2.htm
+      name: "去哪儿_38"
+      type: request
+
+    - match: ^https:\/\/passport.csdn.net\/v2\/api\/app\/login\/checkAndRefreshToken
+      name: "CSDN_39"
+      type: request
+
+    - match: ^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\?
+      name: "CSDN_39"
+      type: request
+
+    - match: ^https:\/\/credits.bz.mgtv.com\/user\/creditsTake
+      name: "芒果tv_41"
+      type: request
+
+    - match: ^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign
+      name: "加油广东_42"
+      type: request
+
+    - match: https:\/\/www.maomicd.com\/plugin.php\?id=k_misign:sign&operation=qiandao
+      name: "猫咪音乐_43"
+      type: request
+
+    - match: ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry
+      name: "美团外卖_44"
+      type: request
+
+    - match: ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction
+      name: "美团外卖_44"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/(.*?)c\.m\.163\.com\/uc\/api\/sign\/v3\/commit
+      name: "网易新闻_46"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
+      name: "美团_47"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/api.everphoto.cn\/users\/self\/checkin\/v2
+      name: "时光相册_48"
+      type: request
+
+    - match: ^https:\/\/maicai.api.ddxq.mobi\/point\/home
+      name: "叮咚买菜_50"
+      type: request
+
+    - match: ^https://api\.dushu\.io/CheckIn
+      name: "樊登读书_53"
+      type: request
+      require-body: true
+
+    - match: ^https://node\.kg\.qq\.com/webapp/proxy?
+      name: "全民K歌_54"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/app\.nio\.com\/api\/1\/app\/daily_checkin
+      name: "蔚来_55"
+      type: request
+
+    - match: ^https:\/\/wxprdapplet\.gac-nio\.com\/community\/userSignIn\/simpleAuth\/front\/.*\/sign$
+      name: "合创_56"
+      type: request
+
+    - match: ^https:\/\/activity-1\.m\.duiba\.com\.cn\/signactivity\/doSign$
+      name: "海底捞_57"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/m-bean\.kaola\.com/m/point/sign\.html
+      name: "网易考拉_58"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list
+      name: "WPS_59"
+      type: request
+
+    - match: ^https:\/\/xiaoshuo\.qm989\.com
+      name: "七猫小说_60"
+      type: request
+
+    - match: ^https:\/\/passport.suning.com\/ids\/login$
+      name: "苏宁易购_61"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/luckman.suning.com\/luck-web\/sign\/api\/clock_sign.do
+      name: "苏宁易购_61"
+      type: request
+
+    - match: ^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do
+      name: "苏宁易购_61"
+      type: request
+
+    - match: ^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do)
+      name: "苏宁易购_61"
+      type: request
+
+    - match: ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php
+      name: "Zaker_65"
+      type: request
+
+    - match: ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in
+      name: "不背单词_66"
+      type: request
+
+    - match: ^https:\/\/gameapi\.hellobike\.com\/api
+      name: "哈啰出行_68"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/mwegame\.qq\.com\/ams\/sign\/doSign\/month
+      name: "掌上飞车_69"
+      type: request
+
+    - match: ^https:\/\/www\.duokan\.com\/checkin\/v0\/status
+      name: "多看_70"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/note.youdao.com\/yws\/mapi\/user\?method=checkin
+      name: "有道云笔记_71"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/user-api-prd-mx\.wandafilm\.com
+      name: "万达电影_72"
+      type: request
+
+    - match: ^https:\/\/wx-mini.pagoda.com.cn\/api\/v1\/wxmini\/signIn\/customer
+      name: "百果园_73"
+      type: request
+
+    - match: ^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?
+      name: "IT之家_74"
+      type: request
+
+    - match: ^http:\/\/api\.infzm\.com\/mobile\/pumpkin_task\/complete?
+      name: "南方周末_75"
+      type: request
+
+    - match: ^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay?
+      name: "智行火车票_76"
+      type: request
+
+# hostname = ifac*.iqiyi.com, www.52pojie.cn, api.m.jd.com, passport.biligame.com, c.tieba.baidu.com, api.kkmh.com
+    - match: ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?)
+      name: "JD_DailyBonus_79"
+      type: request
+      require-body: true
+
+    - match: ^https?:\/\/iface(\d)?\.iqiyi\.com\/
+      name: "爱奇艺_80"
+      type: request
+
+    - match: https:\/\/www\.52pojie\.cn\/home\.php\?
+      name: "吾爱破解_81"
+      type: request
+
+    - match: ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5)
+      name: "哔哩哔哩漫画_82"
+      type: request
+
+    - match: https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login
+      name: "百度贴吧(客户端)_83"
+      type: request
+
+    - match: ^https:\/\/api\.kkmh\.com\/v\d\/passport\/user
+      name: "快看漫画_84"
+      type: request
+
+# hostname = h5.youzan.com,h5.youzan.com,glados.rocks,api.weibo.cn
+    - match: https:\/\/h5\.youzan\.com\/wscump\/checkin\/checkin,
+      name: "Funboat获取签到Cookie_87"
+      type: request
+
+    - match: https:\/\/h5\.youzan\.com\/wscuser\/membercenter\/stats,
+      name: "Funboat获取签到Cookie_87"
+      type: request
+
+    - match: https:\/\/glados\.rocks\/api\/user\/status,
+      name: "GLaDOS获取Cookie_89"
+      type: request
+
+    - match: ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button|page)
+      name: "微博超话获取Cookie_90"
+      type: request
+      require-body: false
+
+    - match: ^https:\/\/mall\.oclean\.com\/API\/VshopProcess\.ashx$
+      name: "欧可林cookie_94"
+      type: request
+
+    - match: ^https:\/\/mall\.oclean\.com\/API\/VshopProcess\.ashx\?action=TaskHome&clientType=5&client=5&openId=
+      name: "欧可林商城cookie_95"
+      type: request
+
+    - match: ^https:\/\/m\.weibo\.cn\/feed\/
+      name: "微博通知_96"
+      type: request
+
+    - match: ^https:\/\/frodo\.douban\.com\/api\/v\d\/calendar\/today
+      name: "豆瓣电影日历_97"
+      type: request
+
+# hostname = weather-data.apple.com, api.weather.com
+    - match: https://weather-data.apple.com
+      name: "彩云天气_101"
+      type: request
+
+# hostname = app*.jegotrip.com.cn, task.jegotrip.com.cn,api.umer.com.cn
+    - match: https?:\/\/app.*\.jegotrip\.com\.cn\/.*getUser\?
+      name: "无忧行_104"
+      type: response
+      require-body: true
+
+    - match: https?:\/\/task\.jegotrip\.com\.cn\:8080\/app\/tasks\?userid
+      name: "无忧行_104"
+      type: response
+      require-body: true
+
+    - match: https?:\/\/api\.umer\.com\.cn\/.*getCurrentUmerSign
+      name: "优麦医生_106"
+      type: request
+
+    - match: ^https:\/\/cxdng\.cpic\.com\.cn\/taieshop\/api\/CustomerFansInfo\/GetFansInfo
+      name: "太好购_111"
+      type: request
+
+# hostname = *.xmcimg.com,api.weibo.cn
+    - match: ^https?:\/\/mapi.xmcimg.com\/bbs\/memcp.php\?action
+      name: "小木虫论坛cookie_114"
+      type: request
+
+    - match: ^https:\/\/api\.weibo\.cn\/2\/(cardlist|page\/button)
+      name: "微博超话cookie_115"
+      type: request
+
+# hostname = proxy.vac.qq.com,*.bilibili.com,yuba.douyu.com,qqpet.jwetech.com
+    - match: ^https:\/\/proxy.vac.qq.com\/cgi-bin\/srfentry.fcgi
+      name: "qq会员成长值cookie_118"
+      type: request
+
+    - match: https?:\/\/app.bilibili.com\/x\/v2\/space\/bangumi
+      name: "哔哩哔哩番剧监控cookie_119"
+      type: request
+      require-body: true
+
+    - match: ^https://yuba.douyu.com/wbapi/web/group/myFollow
+      name: "斗鱼鱼吧获取cookie_120"
+      type: request
+      require-body: true
+
+    - match: https:\/\/qqpet.jwetech.com\/api\/authorizations
+      name: "QQ萌宠cookie_121"
+      type: response
+      require-body: true
+
+    - match: https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion
+      name: "JD_extra_cookie_128"
+      type: request
+
+# hostname = hongbao.youzikuaibao.com,jdread-api.jd.com,getconfig-globalapi.zymk.cn,wox2019.woxshare.com,appsmall.rtmap.com,choujiang-server.deering.cn,api.momosyb.com,*.zhuishushenqi.com
+    - match: ^http?:\/\/hongbao\.youzikuaibao\.com\/youzi\/*
+      name: "柚子快报_131"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/jdread-api\.jd\.com\/*
+      name: "京东读书签到_132"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/getconfig-globalapi\.zymk\.cn\/app_api\/*
+      name: "知音漫客_133"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/wox2019\.woxshare\.com\/*
+      name: "海德汇一城_134"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/appsmall\.rtmap\.com\/*
+      name: "民盈国贸城_135"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/api\.momosyb\.com\/(v6|v1)\/(fans|user)\/*
+      name: "微商星球_136"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/.+zhuishushenqi\.com\/*
+      name: "追书畅读版_137"
+      type: request
+      require-body: true
+
+# hostname = api.m.jd.com
+    - match: https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign
+      name: "梨涡签到领现金Cookie_140"
+      type: request
+      require-body: true
+
+# hostname = h5.ele.me,ios.baertt.com, *.youth.cn
+    - match: ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$
+      name: "elem_146"
+      type: request
+
+    - match: https://ios.baertt.com/v5/article/complete.json
+      name: "中青body(用此脚本需关闭其他四条中青）_147"
+      type: request
+      require-body: true
+
+# hostname = maicai.api.ddxq.mobi,studygolang.com,m.ctrip.com,sports.lifesense.com,i.snssdk.com,is.snssdk.com
+    - match: ^https:\/\/maicai\.api\.ddxq\.mobi\/user\/checkLogin
+      name: "叮咚农场cookie_153"
+      type: request
+
+    - match: https:\/\/studygolang\.com\/account\/edit
+      name: "go 语言中文网_154"
+      type: request
+
+    - match: https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo
+      name: "携程旅行_155"
+      type: request
+
+    - match: ^https:\/\/sports\.lifesense\.com\/sport_service\/sport\/sport\/uploadMobileStepV2
+      name: "lxhealth_156"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/is\.snssdk\.com\/score_task\/v1\/task\/(sign_in|get_read_bonus)
+      name: "今日头条极速版-任务_157"
+      type: request
+
+    - match: ^https:\/\/i\.snssdk\.com\/ttgame\/game_farm\/home_info
+      name: "今日头条极速版-任务_157"
+      type: request
+
+# hostname = ngabbs.com,exp.angelalign.com
+    - match: ^https:\/\/exp.angelalign.com\/api\/v1\/mini_program\/get_plan_list
+      name: "时代天使_170"
+      type: request
+
+    - match: ^https:\/\/ngabbs.com\/nuke.php\??
+      name: "nga刮墙_171"
+      type: request
+      require-body: true
+
+# hostname = m.ctrp.com,*.ctrp.com,m.elong.com,activity.m.duiba.com.cn,activity.m.duiba.com.cn,icbc1.wlphp.com:8444,cn.exflux.io,api.m.jd.com,daojia.jd.com，api.m.jd.com, ms.jr.id.com，wx.17u.cn
+    - match: https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo
+      name: "携程旅行_174"
+      type: request
+
+    - match: ^https:\/\/icbc1\.wlphp\.com:8444\/js\/api\/index\/signIn
+      name: "工银e生活_176"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo
+      name: "微信小程序-同程艺龙_177"
+      type: request
+      require-body: true
+
+    - match: ^https:\/\/activity\.m\.duiba\.com\.cn\/signactivity\/getSignInfo?
+      name: "非常准_178"
+      type: request
+
+    - match: ^https:\/\/m\.elong\.com\/my\/rafflemileagejson\/getRaffleMileageTodayCount
+      name: "elong_179"
+      type: request
+
+    - match: ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/16575\/signin
+      name: "微信小程序-携程_180"
+      type: request
+
+    - match: ^https:\/\/daojia\.jd\.com\/client?
+      name: "京东到家_181"
+      type: request
+
+    - match: ^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/h5\/m\/recommendGetWay
+      name: "京东金额提额_182"
+      type: request
+
+# hostname = operation-api.jimistore.com
+    - match: ^https:\/\/operation-api\.jimistore\.com\/*
+      name: "天天挖矿_188"
+      type: request
+      require-body: true
+
+script-providers:
+  "中国联通_15":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+    interval: 86400
+  "中国电信_18":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js
+    interval: 86400
+  "百度签到(网页)_19":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
+    interval: 86400
+  "网易云音乐_20":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js
+    interval: 86400
+  "什么值得买_21":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
+    interval: 86400
+  "V2ex_22":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
+    interval: 86400
+  "哔哩哔哩_23":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
+    interval: 86400
+  "威锋论坛_24":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js
+    interval: 86400
+  "腾讯视频_25":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js
+    interval: 86400
+  "AcFun_26":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js
+    interval: 86400
+  "字幕组_27":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
+    interval: 86400
+  "喜马拉雅_29":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
+    interval: 86400
+  "人人视频_30":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
+    interval: 86400
+  "飞客茶馆_31":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.cookie.js
+    interval: 86400
+  "顺丰速运_32":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+    interval: 86400
+  "懂球帝_35":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/dongqiudi/dongqiudi.cookie.js
+    interval: 86400
+  "网易严选_36":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/yanxuan/yanxuan.cookie.js
+    interval: 86400
+  "APK.TW_37":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js
+    interval: 86400
+  "去哪儿_38":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.cookie.js
+    interval: 86400
+  "CSDN_39":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js
+    interval: 86400
+  "芒果tv_41":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
+    interval: 86400
+  "加油广东_42":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js
+    interval: 86400
+  "猫咪音乐_43":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.cookie.js
+    interval: 86400
+  "美团外卖_44":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
+    interval: 86400
+  "网易新闻_46":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js
+    interval: 86400
+  "美团_47":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+    interval: 86400
+  "时光相册_48":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.cookie.js
+    interval: 86400
+  "叮咚买菜_50":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.cookie.js
+    interval: 86400
+  "樊登读书_53":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.cookie.js
+    interval: 86400
+  "全民K歌_54":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.cookie.js
+    interval: 86400
+  "蔚来_55":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/nio/nio.cookie.js
+    interval: 86400
+  "合创_56":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/hycan/hycan.cookie.js
+    interval: 86400
+  "海底捞_57":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/haidilao/hdl.js
+    interval: 86400
+  "网易考拉_58":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.cookie.js
+    interval: 86400
+  "WPS_59":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js
+    interval: 86400
+  "七猫小说_60":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qimao/qmnovel.js
+    interval: 86400
+  "苏宁易购_61":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
+    interval: 86400
+  "Zaker_65":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
+    interval: 86400
+  "不背单词_66":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js
+    interval: 86400
+  "哈啰出行_68":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
+    interval: 86400
+  "掌上飞车_69":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/zsfc/zsfc.js
+    interval: 86400
+  "多看_70":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.cookie.js
+    interval: 86400
+  "有道云笔记_71":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/noteyoudao/noteyoudao.cookie.js
+    interval: 86400
+  "万达电影_72":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.cookie.js
+    interval: 86400
+  "百果园_73":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/pagoda/pagoda.cookie.js
+    interval: 86400
+  "IT之家_74":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js
+    interval: 86400
+  "南方周末_75":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/nfzm/nfzm.cookie.js 
+    interval: 86400
+  "智行火车票_76":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js
+    interval: 86400
+  "JD_DailyBonus_79":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+    interval: 86400
+  "爱奇艺_80":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+    interval: 86400
+  "吾爱破解_81":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+    interval: 86400
+  "哔哩哔哩漫画_82":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+    interval: 86400
+  "百度贴吧(客户端)_83":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+    interval: 86400
+  "快看漫画_84":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
+    interval: 86400
+  "Funboat获取签到Cookie_87":
+    url: https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/funboat/funboat.js
+    interval: 86400
+  "GLaDOS获取Cookie_89":
+    url: https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
+    interval: 86400
+  "微博超话获取Cookie_90":
+    url: https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js
+    interval: 86400
+  "欧可林cookie_94":
+    url: https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js
+    interval: 86400
+  "欧可林商城cookie_95":
+    url: https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js
+    interval: 86400
+  "微博通知_96":
+    url: https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
+    interval: 86400
+  "豆瓣电影日历_97":
+    url: https://raw.githubusercontent.com/zZPiglet/Task/master/MovieCalendar/MovieCalendar.js
+    interval: 86400
+  "彩云天气_101":
+    url: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+    interval: 86400
+  "无忧行_104":
+    url: https://ooxx.be/js/jegotrip.js
+    interval: 86400
+  "优麦医生_106":
+    url: https://ooxx.be/js/umer.js
+    interval: 86400
+  "太好购_111":
+    url: https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.cookie.js
+    interval: 86400
+  "小木虫论坛cookie_114":
+    url: https://raw.githubusercontent.com/toulanboy/scripts/master/muchong/muchong.js
+    interval: 86400
+  "微博超话cookie_115":
+    url: https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
+    interval: 86400
+  "qq会员成长值cookie_118":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js
+    interval: 86400
+  "哔哩哔哩番剧监控cookie_119":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js
+    interval: 86400
+  "斗鱼鱼吧获取cookie_120":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js
+    interval: 86400
+  "QQ萌宠cookie_121":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js
+    interval: 86400
+  "JD_extra_cookie_128":
+    url: https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra_cookie.js
+    interval: 86400
+  "柚子快报_131":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/yzkbSign.js
+    interval: 86400
+  "京东读书签到_132":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
+    interval: 86400
+  "知音漫客_133":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/zymkSign.js
+    interval: 86400
+  "海德汇一城_134":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js
+    interval: 86400
+  "民盈国贸城_135":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/mygmcSign.js
+    interval: 86400
+  "微商星球_136":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/wsxqSign.js
+    interval: 86400
+  "追书畅读版_137":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/zscdbSign.js
+    interval: 86400
+  "梨涡签到领现金Cookie_140":
+    url: https://raw.githubusercontent.com/iisams/Scripts/master/liwo/7dayscookie.js
+    interval: 86400
+  "elem_146":
+    url: https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
+    interval: 86400
+  "中青body(用此脚本需关闭其他四条中青）_147":
+    url: https://raw.githubusercontent.com/songyangzz/QuantumultX/master/zqgetbody.js
+    interval: 86400
+  "叮咚农场cookie_153":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/dingdong/index.js
+    interval: 86400
+  "go 语言中文网_154":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/studygolang/index.js
+    interval: 86400
+  "携程旅行_155":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/ctrip/index.js
+    interval: 86400
+  "lxhealth_156":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/lxhealth/index.js
+    interval: 86400
+  "今日头条极速版-任务_157":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/jrtt/index.js
+    interval: 86400
+  "时代天使_170":
+    url: https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.cookie.js
+    interval: 86400
+  "nga刮墙_171":
+    url: https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
+    interval: 86400
+  "携程旅行_174":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js
+    interval: 86400
+  "工银e生活_176":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_cookie.js
+    interval: 86400
+  "微信小程序-同程艺龙_177":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_cookie.js
+    interval: 86400
+  "非常准_178":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/fcz/fcz_cookie.js
+    interval: 86400
+  "elong_179":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/elong/elong_draw_cookis.js
+    interval: 86400
+  "微信小程序-携程_180":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip_wx/ct_cookie.js
+    interval: 86400
+  "京东到家_181":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/jddj/jddj_cookie.js
+    interval: 86400
+  "京东金额提额_182":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/tie/tie_cookie.js
+    interval: 86400
+  "天天挖矿_188":
+    url: https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js
+    interval: 86400
