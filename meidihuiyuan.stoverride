@@ -1,0 +1,33 @@
+name: "微信小程序 美的会员 签到"
+desc: "打开小程序->我的，提示获取Cookie成功"
+
+http:
+
+  mitm:
+    - "mvip.midea.cn"
+
+  script:
+
+    - match: ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo
+      name: "美的会员_17"
+      type: request
+      timeout: 10
+
+cron:
+  script:
+
+    - name: "美的会员_17"
+      cron: "9 9 * * *"
+      timeout: 300
+
+    - name: "dingdong_checkin_29"
+      cron: "8 0 * * *"
+      timeout: 60
+
+script-providers:
+  "美的会员_17":
+    url: midea.js
+    interval: 86400
+  "dingdong_checkin_29":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+    interval: 86400
