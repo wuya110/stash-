@@ -1,0 +1,135 @@
+name: "fmz200定时任务合集"
+desc: "整合大部分定时任务stash版"
+author: "fmz200"
+
+cron:
+  script:
+
+    - name: "百度签到(网页)_12"
+      cron: "10 3 8 * * *"
+
+    - name: "网易云音乐_13"
+      cron: "10 2 8 * * *"
+
+    - name: "去哪儿_14"
+      cron: "40 2 8 * * *"
+
+    - name: "什么值得买_15"
+      cron: "10 3 8 * * *"
+
+    - name: "中国联通_16"
+      cron: "0 5 8 * * *"
+
+    - name: "斗鱼鱼吧签到_23"
+      cron: "21 4 0,1 * * *"
+
+    - name: "历史上的今天,_24"
+      cron: "8 4 8 * * *"
+# 领京豆额外奖励
+    - name: "领京豆额外奖励_26"
+      cron: "10 7 * * *"
+# 京东汽车
+    - name: "京东汽车_28"
+      cron: "10 7 * * *"
+# 京东汽车兑换
+    - name: "京东汽车兑换_30"
+      cron: "0 0 * * *"
+# 签到领现金
+    - name: "签到领现金_32"
+      cron: "2 0-23/4 * * *"
+# 东东农场
+    - name: "东东农场_34"
+      cron: "5 6-18/6 * * *"
+# 东东健康社区
+    - name: "东东健康社区_36"
+      cron: "13 1,6,22 * * *"
+# 东东健康社区收集能量收集
+    - name: "东东健康社区收集能量_38"
+      cron: "5-45/20 * * * *"
+# 京东快递签到
+    - name: "京东快递签到_40"
+      cron: "10 0 * * *"
+# 点点券
+    - name: "点点券_42"
+      cron: "10 0,20 * * *"
+# 京东极速版红包
+    - name: "京东极速版红包_44"
+      cron: "20 0,22 * * *"
+
+# 新浪微博
+    - name: "新浪微博_48"
+      cron: "15 2 * * *"
+# 伊利乳品
+    - name: "伊利乳品_50"
+      cron: "15 9 * * *"
+
+    - name: "高德地图_52"
+      cron: "1 0 * * *"
+
+    - name: "叮咚买菜_54"
+      cron: "10 6 8 * * *"
+
+script-providers:
+  "百度签到(网页)_12":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
+    interval: 86400
+  "网易云音乐_13":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js
+    interval: 86400
+  "去哪儿_14":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.js
+    interval: 86400
+  "什么值得买_15":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js
+    interval: 86400
+  "中国联通_16":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
+    interval: 86400
+  "斗鱼鱼吧签到_23":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js
+    interval: 86400
+  "历史上的今天,_24":
+    url: https://raw.githubusercontent.com/dompling/Script/master/historyToday/index.js
+    interval: 86400
+  "领京豆额外奖励_26":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_bean_home.js
+    interval: 86400
+  "京东汽车_28":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_car.js
+    interval: 86400
+  "京东汽车兑换_30":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_car_exchange.js
+    interval: 86400
+  "签到领现金_32":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_cash.js
+    interval: 86400
+  "东东农场_34":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_fruit.js
+    interval: 86400
+  "东东健康社区_36":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_health.js
+    interval: 86400
+  "东东健康社区收集能量_38":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_health_collect.js
+    interval: 86400
+  "京东快递签到_40":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_kd.js
+    interval: 86400
+  "点点券_42":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_necklace.js
+    interval: 86400
+  "京东极速版红包_44":
+    url: https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_speed_redpocke.js
+    interval: 86400
+  "新浪微博_48":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js
+    interval: 86400
+  "伊利乳品_50":
+    url: https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js
+    interval: 86400
+  "高德地图_52":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+    interval: 86400
+  "叮咚买菜_54":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.js
+    interval: 86400
