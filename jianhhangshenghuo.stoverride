@@ -1,3 +1,7 @@
+name: "建行生活签到"
+desc: "活动入口：建行生活APP -> 首页 -> 会员有礼 -> 签到
+ * 脚本说明：连续签到领优惠券礼包（打车、外卖优惠券），配置重写手动签到一次即可获取签到数据，默认领取外卖券，可在 BoxJS 配置奖品。"
+#https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
 cron:
   script:
     - name: 建行生活签到
