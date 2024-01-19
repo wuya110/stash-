@@ -1,0 +1,21 @@
+name: "美团签到"
+desc: "美团APP -> 首页 -> 红包签到 -> 手动签到一次"
+
+http:
+
+  mitm:
+    - "i.meituan.com"
+
+  script:
+# 使用方法2：美团APP -> 首页 -> 红包签到 -> 手动签到一次
+    - match: ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
+      name: "meituan.cookie_4"
+      type: request
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+script-providers:
+  "meituan.cookie_4":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+    interval: 86400
