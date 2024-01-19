@@ -1,0 +1,27 @@
+name: "霸王茶姬小程序签到"
+desc: "打开小程序->进入我的页面，若提示获取Cookie成功则可以使用该脚本"
+
+http:
+
+  mitm:
+    - "qmwebapi.qmai.cn"
+    - "webapi.qmai.cn"
+
+  script:
+
+    - match: ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info
+      name: "🥤霸王茶姬小程序签到_16"
+      type: request
+      timeout: 10
+
+cron:
+  script:
+
+    - name: "🥤霸王茶姬小程序签到_16"
+      cron: "0 10 * * *"
+      timeout: 300
+
+script-providers:
+  "🥤霸王茶姬小程序签到_16":
+    url: https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js
+    interval: 86400
