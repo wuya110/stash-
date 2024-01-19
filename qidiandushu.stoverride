@@ -1,0 +1,51 @@
+name: "起点读书自动看广告"
+desc: "任务1: 福利中心 --> 每日视频福利 --> 手动看一个视频
+任务2: 福利中心 --> 限时彩蛋 --> 额外看三次小视频奖励 --> 手动看一个视频
+默认执行次数: 8次
+默认间隔时间: 20s "
+
+http:
+
+  mitm:
+    - "h5.if.qidian.com"
+
+  script:
+
+    - match: https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch
+      name: "qidian.cookie_8"
+      type: request
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/mainPage
+      name: "qidian.taskId_9"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+cron:
+  script:
+
+    - name: "qidian_14"
+      cron: "30 10 * * *"
+      timeout: 60
+
+    - name: "dingdong_checkin_22"
+      cron: "8 0 * * *"
+      timeout: 60
+
+script-providers:
+  "qidian.cookie_8":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.cookie.js
+    interval: 86400
+  "qidian.taskId_9":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.taskId.js
+    interval: 86400
+  "qidian_14":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.js
+    interval: 86400
+  "dingdong_checkin_22":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+    interval: 86400
