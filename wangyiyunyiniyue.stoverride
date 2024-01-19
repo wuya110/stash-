@@ -1,0 +1,20 @@
+name: "网易云vip解锁"
+desc: "VIP音乐试听权限+
+不会变身会员,可以直接听会员歌曲"
+
+http:
+
+  mitm:
+    - "*.music.163.com"
+
+  script:
+# > 网易云解锁VIP
+    - match: ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$
+      name: "Wyy_9"
+      type: request
+      timeout: 60
+
+script-providers:
+  "Wyy_9":
+    url: https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js
+    interval: 86400
