@@ -1,0 +1,33 @@
+name: "途虎养车app小程序积分签到"
+desc: "cookie获取:公众号搜索途虎小程序登录"
+
+http:
+
+  mitm:
+    - "api.tuhu.cn"
+
+  script:
+
+    - match: https://api.tuhu.cn/User/GetInternalCenterInfo
+      name: "Tuhyche_6"
+      type: request
+      timeout: 60
+
+cron:
+  script:
+
+    - name: "Tuhyche_6"
+      cron: "40 8 * * *"
+      timeout: 60
+
+    - name: "dingdong_checkin_11"
+      cron: "8 0 * * *"
+      timeout: 60
+
+script-providers:
+  "Tuhyche_6":
+    url: https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+    interval: 86400
+  "dingdong_checkin_11":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+    interval: 86400
