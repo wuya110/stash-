@@ -1,14 +1,14 @@
-name: 建行生活
+name: 慢慢买
 desc: 
-icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg
+icon: 
 
 cron:
   script:
-    - name: "建行生活_27"
-      cron: "37 1 * * *"
-      timeout: 30
+    - name: "慢慢买_9"
+      cron: "20 0 * * ?"
+      timeout: 60
 
 script-providers:
-  "建行生活_27":
-    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
+  "慢慢买_9":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
     interval: 86400
