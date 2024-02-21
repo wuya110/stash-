@@ -1,0 +1,14 @@
+name: 美的会员签到
+desc: 
+icon: 
+
+cron:
+  script:
+    - name: "美的会员签到_5"
+      cron: "3 7 * * *"
+      timeout: 60
+
+script-providers:
+  "美的会员签到_5":
+    url: https://gist.githubusercontent.com/Sliverkiss/3c0239a09cbe381c572a826a5caf5621/raw/midea.js
+    interval: 86400
