@@ -15,8 +15,8 @@ cron:
     - name: "美的会员签到_5"
       cron: "3 7 * * *"
       timeout: 60
-    #- name: "波点音乐_7"
-      cron: "0 1 * * *"
+    - name: "波点音乐_7"
+      #cron: "0 1 * * *"
       timeout: 60
     - name: "慢慢买_9"
       cron: "20 0 * * ?"
