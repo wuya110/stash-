@@ -5,7 +5,7 @@ icon: https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/wyyyy.p
 cron:
   script:
     - name: "网易云音乐人_3"
-      cron: "26 0 * * *"
+      cron: "28 0 * * *"
       timeout: 60
 
 script-providers:
