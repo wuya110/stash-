@@ -1,33 +1,331 @@
-name: "微信小程序 美的会员 签到"
-desc: "打开小程序->我的，提示获取Cookie成功"
-
-http:
-
-  mitm:
-    - "mvip.midea.cn"
-
-  script:
-
-    - match: ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo
-      name: "美的会员_17"
-      type: request
-      timeout: 10
+name: |-
+  🌸Sakura樱花交流会
+desc: |-
+  sliverkiss
+author: |-
+  @Sliverkiss
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1019.png
 
 cron:
   script:
-
-    - name: "美的会员_17"
-      cron: "45 0 * * *"
-      timeout: 300
-
-    - name: "dingdong_checkin_29"
+    - name: "网易云音乐人_3"
+      cron: "0 10 * * *"
+      timeout: 60
+    - name: "美的会员签到_5"
+      cron: "3 7 * * *"
+      timeout: 60
+    #- name: "波点音乐_7"
+      cron: "0 1 * * *"
+      timeout: 60
+    - name: "慢慢买_9"
+      cron: "20 0 * * ?"
+      timeout: 60
+    - name: "刺猬猫_11"
+      cron: "45 8,12 * * *"
+      timeout: 60
+    - name: "ChinaBroadnet_13"
+      cron: "30 21 * * *"
+      timeout: 60
+    - name: "微博超话_15"
+      cron: "5 0 0 * * *"
+      timeout: 60
+    - name: "hax数据监控_17"
+      cron: "22 0 8 * * *"
+      timeout: 60
+    - name: "动漫之家日常任务_19"
+      cron: "24 8 * * *"
+      timeout: 60
+    - name: "爱奇艺签到_21"
+      cron: "0 9 * * *"
+      timeout: 60
+    - name: "托迈酷客_23"
+      cron: "15 10 * * *"
+      timeout: 60
+    - name: "达美乐披萨_25"
+      cron: "21 10 * * *"
+      timeout: 60
+    - name: "建行生活_27"
+      cron: "30 7 * * *"
+      timeout: 60
+    - name: "鸿星尔克签到_29"
+      cron: "5 8 * * *"
+      timeout: 60
+    - name: "巴奴毛肚火锅签到_31"
+      cron: "57 21 * * *"
+      timeout: 60
+    - name: "奇瑞汽车_33"
+      cron: "09 18 * * *"
+      timeout: 60
+    - name: "喜马拉雅日常任务_35"
+      cron: "35 8 * * *"
+      timeout: 60
+    - name: "巴哈姆特签到_37"
+      cron: "0 8 * * *"
+      timeout: 60
+    - name: "b站每日等级任务_39"
+      cron: "10 9 * * *"
+      timeout: 60
+    - name: "STLXZ签到_41"
+      cron: "11 8 * * *"
+      timeout: 60
+    - name: "美团签到_43"
+      cron: "0 0 12 * * *"
+      timeout: 60
+    - name: "轻之文库_45"
+      cron: "15 2 * * *"
+      timeout: 60
+    - name: "Bojs恢复_47"
+      cron: "5 10 * * *"
+      timeout: 60
+    - name: "Boxjs备份_49"
+      cron: "0 10 * * *"
+      timeout: 60
+    - name: "夸克网盘签到_51"
+      cron: "10 0 * * *"
+      timeout: 60
+    - name: "Switch520签到_53"
+      cron: "11 10 * * *"
+      timeout: 60
+    - name: "雀巢会员俱乐部签到_55"
+      cron: "21 30 0 * * *"
+      timeout: 60
+    - name: "TestFlight自动加入_57"
+      cron: "0 * * * *"
+      timeout: 60
+    - name: "海信爱家_59"
+      cron: "52 7 * * *"
+      timeout: 60
+    - name: "网上国网电费查询_61"
+      cron: "0 9 * * *"
+      timeout: 60
+    - name: "花夏ios签到_63"
+      cron: "6 3 * * *"
+      timeout: 60
+    - name: "百度贴吧_65"
+      cron: "30 10 * * *"
+      timeout: 60
+    - name: "什么值得买_67"
+      cron: "5 10 * * *"
+      timeout: 60
+    - name: "阿里云任务_69"
+      cron: "0 7,11 * * *"
+      timeout: 60
+    - name: "知轩藏书签到_71"
+      cron: "25 1 * * *"
+      timeout: 60
+    - name: "哈罗单车奖励金签到_73"
+      cron: "21 0 0 * * *"
+      timeout: 60
+    - name: "美团买菜任务_75"
+      cron: "0 6,8 * * *"
+      timeout: 60
+    - name: "捷停车签到_77"
+      cron: "15 9 * * *"
+      timeout: 60
+    - name: "华住会_79"
+      cron: "1 0 * * *"
+      timeout: 60
+    - name: "小豆苗app签到_81"
+      cron: "16 0 * * *"
+      timeout: 60
+    - name: "途虎养车积分签到_83"
+      cron: "40 8 * * *"
+      timeout: 60
+    - name: "霸王别姬小程序签到_85"
+      cron: "0 10 * * *"
+      timeout: 60
+    - name: "macat签到_87"
+      cron: "30 10 * * *"
+      timeout: 60
+    - name: "天翼云盘签到_89"
+      cron: "30 5 * * *"
+      timeout: 60
+    - name: "AcFun签到_91"
+      cron: "11 7 * * *"
+      timeout: 60
+    - name: "起点读书_93"
+      cron: "34 10 * * *"
+      timeout: 60
+    - name: "腕表之家签到_95"
+      cron: "9 0 * * *"
+      timeout: 60
+    - name: "亚朵酒店签到_97"
       cron: "8 0 * * *"
+      timeout: 60
+    - name: "雨晨ios签到_99"
+      cron: "7 0 * * *"
+      timeout: 60
+    - name: "松鼠ios签到_101"
+      cron: "11 11 * * *"
+      timeout: 60
+    - name: "森空岛小助手_103"
+      cron: "0 6 * * *"
+      timeout: 60
+    - name: "米游社小助手_105"
+      cron: "5 0 * * *"
+      timeout: 60
+    - name: "高德地图打车签到_107"
+      cron: "2 0 * * *"
       timeout: 60
 
 script-providers:
-  "美的会员_17":
-    url: midea.js
+  "网易云音乐人_3":
+    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js
     interval: 86400
-  "dingdong_checkin_29":
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+  "美的会员签到_5":
+    url: https://gist.githubusercontent.com/Sliverkiss/3c0239a09cbe381c572a826a5caf5621/raw/midea.js
+    interval: 86400
+  "波点音乐_7":
+    url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js
+    interval: 86400
+  "慢慢买_9":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
+    interval: 86400
+  "刺猬猫_11":
+    url: https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
+    interval: 86400
+  "ChinaBroadnet_13":
+    url: https://github.com/wuhuhuuuu/study/raw/main/Scripts/ChinaBroadnet/ChinaBroadnet.js
+    interval: 86400
+  "微博超话_15":
+    url: https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js
+    interval: 86400
+  "hax数据监控_17":
+    url: https://gist.githubusercontent.com/Sliverkiss/c92ff545b2c48da565c029720c5282db/raw/hax.js
+    interval: 86400
+  "动漫之家日常任务_19":
+    url: https://gist.githubusercontent.com/Sliverkiss/50a2046b37e01bb8f10ab0420d6f2a91/raw/dmzj.js
+    interval: 86400
+  "爱奇艺签到_21":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+    interval: 86400
+  "托迈酷客_23":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
+    interval: 86400
+  "达美乐披萨_25":
+    url: https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+    interval: 86400
+  "建行生活_27":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
+    interval: 86400
+  "鸿星尔克签到_29":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/hxek.js
+    interval: 86400
+  "巴奴毛肚火锅签到_31":
+    url: https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/bnmdhg_wx.js
+    interval: 86400
+  "奇瑞汽车_33":
+    url: https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/chery.js
+    interval: 86400
+  "喜马拉雅日常任务_35":
+    url: https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js
+    interval: 86400
+  "巴哈姆特签到_37":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutDailyBonus.js
+    interval: 86400
+  "b站每日等级任务_39":
+    url: https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+    interval: 86400
+  "STLXZ签到_41":
+    url: https://gist.githubusercontent.com/Sliverkiss/b1b8b87351ff3aca189c5addaa054430/raw/stlxz.js
+    interval: 86400
+  "美团签到_43":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js
+    interval: 86400
+  "轻之文库_45":
+    url: https://gist.githubusercontent.com/Sliverkiss/a56aaa31bbc01191590b9c4c5c698751/raw/linovel.js
+    interval: 86400
+  "Bojs恢复_47":
+    url: https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
+    interval: 86400
+  "Boxjs备份_49":
+    url: https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
+    interval: 86400
+  "夸克网盘签到_51":
+    url: https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js
+    interval: 86400
+  "Switch520签到_53":
+    url: https://gist.githubusercontent.com/Sliverkiss/3d9c00790143eba146c3ba798eda4696/raw/switch520.js
+    interval: 86400
+  "雀巢会员俱乐部签到_55":
+    url: https://gist.githubusercontent.com/Sliverkiss/f533ada8d658a0cbbe4b2e791c3b0ac8/raw/be3d9b74fe1cde69e6d39b599e5526110c996958/nestle.js
+    interval: 86400
+  "TestFlight自动加入_57":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js
+    interval: 86400
+  "海信爱家_59":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
+    interval: 86400
+  "网上国网电费查询_61":
+    url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js
+    interval: 86400
+  "花夏ios签到_63":
+    url: https://gist.githubusercontent.com/Sliverkiss/f06235486565837c18435b40d99229e5/raw/d3e51037e9d46f668161172c58a93319681b3382/hxsy.js
+    interval: 86400
+  "百度贴吧_65":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+    interval: 86400
+  "什么值得买_67":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
+    interval: 86400
+  "阿里云任务_69":
+    url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+    interval: 86400
+  "知轩藏书签到_71":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js
+    interval: 86400
+  "哈罗单车奖励金签到_73":
+    url: https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js
+    interval: 86400
+  "美团买菜任务_75":
+    url: https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js
+    interval: 86400
+  "捷停车签到_77":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js
+    interval: 86400
+  "华住会_79":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/hzh.js
+    interval: 86400
+  "小豆苗app签到_81":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/xdm.js
+    interval: 86400
+  "途虎养车积分签到_83":
+    url: https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+    interval: 86400
+  "霸王别姬小程序签到_85":
+    url: https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js
+    interval: 86400
+  "macat签到_87":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/macat.js
+    interval: 86400
+  "天翼云盘签到_89":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/ty.js
+    interval: 86400
+  "AcFun签到_91":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/acfun.js
+    interval: 86400
+  "起点读书_93":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.js
+    interval: 86400
+  "腕表之家签到_95":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/wbzj.js
+    interval: 86400
+  "亚朵酒店签到_97":
+    url: https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/e399523e428f3c173ec4b95c892725006c3128ff/adjd.js
+    interval: 86400
+  "雨晨ios签到_99":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js
+    interval: 86400
+  "松鼠ios签到_101":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/sxios.js
+    interval: 86400
+  "森空岛小助手_103":
+    url: https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland-auto-sign.js
+    interval: 86400
+  "米游社小助手_105":
+    url: https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs-auto-helper.js
+    interval: 86400
+  "高德地图打车签到_107":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
     interval: 86400
