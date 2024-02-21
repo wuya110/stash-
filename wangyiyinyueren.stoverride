@@ -1,0 +1,14 @@
+name: 网易音乐人
+desc: 
+icon: 
+
+cron:
+  script:
+    - name: "网易云音乐人_3"
+      cron: "0 10 * * *"
+      timeout: 60
+
+script-providers:
+  "网易云音乐人_3":
+    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js
+    interval: 86400
