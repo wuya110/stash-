@@ -1,8 +1,6 @@
-name: "网易音乐人"
-#desc: "当前版本支持以下任务:
-    云贝: 签到；
-    音乐人: 每日任务、推荐任务(发表主创说、发布动态、回复粉丝私信)，完成以上任务后可自动领取云豆；"
-icon: "https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/wyyyy.png"
+name: 网易音乐人
+desc:
+icon: https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/wyyyy.png
 
 cron:
   script:
