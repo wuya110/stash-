@@ -5,7 +5,7 @@ icon:
 cron:
   script:
     - name: "慢慢买_9"
-      cron: "42 1 * * ?"
+      cron: "46 1 * * ?"
       timeout: 60
 
 script-providers:
