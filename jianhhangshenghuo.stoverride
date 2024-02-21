@@ -5,8 +5,8 @@ icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbL
 cron:
   script:
     - name: "建行生活_27"
-      cron: "20 1 * * *"
-      timeout: 60
+      cron: "37 1 * * *"
+      timeout: 30
 
 script-providers:
   "建行生活_27":
