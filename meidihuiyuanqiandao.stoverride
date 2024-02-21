@@ -1,11 +1,11 @@
 name: 美的会员签到
 desc: 
-icon: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Midea.png
 
 cron:
   script:
     - name: "美的会员签到_5"
-      cron: "3 7 * * *"
+      cron: "41 0 * * *"
       timeout: 60
 
 script-providers:
