@@ -46,7 +46,7 @@ cron:
       cron: "21 10 * * *"
       timeout: 60
     - name: "建行生活_27"
-      cron: "30 7 * * *"
+      cron: "05 1 * * *"
       timeout: 60
     - name: "鸿星尔克签到_29"
       cron: "5 8 * * *"
