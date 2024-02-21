@@ -17,7 +17,7 @@ cron:
   script:
 
     - name: "美的会员_17"
-      cron: "9 9 * * *"
+      cron: "45 0 * * *"
       timeout: 300
 
     - name: "dingdong_checkin_29"
