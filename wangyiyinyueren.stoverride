@@ -1,6 +1,6 @@
 name: 网易音乐人
 desc: 
-icon: 
+icon: https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/wyyyy.png
 
 cron:
   script:
