@@ -8,7 +8,7 @@ cron:
   script:
 
     - name: "获取捷停车userId_11"
-      cron: "20 20 * * *"
+      cron: "5 0 * * *"
       timeout: 60
 
 script-providers:
