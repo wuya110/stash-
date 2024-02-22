@@ -1,19 +1,7 @@
 name: "哈罗单车奖励金签到"
-desc: "在支付宝小程序打开哈罗单车获取cookie"
+desc: "在支付宝小程序打开哈罗单车
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hldc.png
 
-http:
-
-  mitm:
-    - "api.hellobike.com"
-
-  script:
-
-    - match: ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo
-      name: "哈罗单车奖励金签到"
-      type: request
-      require-body: true
-      script: hldc.js
-      timeout: 10
 
 cron:
   script:
