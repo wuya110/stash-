@@ -8,7 +8,7 @@ cron:
   script:
 
     - name: "🥤霸王茶姬小程序签到_16"
-      cron: "0 0 * * *"
+      cron: "1 0 * * *"
       timeout: 300
 
 script-providers:
