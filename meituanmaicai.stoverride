@@ -1,0 +1,14 @@
+name: 美团买菜任务
+desc: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Mtmc.png
+
+cron:
+  script:
+    - name: "美团买菜任务_75"
+      cron: "0 6,8 * * *"
+      timeout: 60
+
+script-providers:
+  "美团买菜任务_75":
+    url: https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js
+    interval: 86400
