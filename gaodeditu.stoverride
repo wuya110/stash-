@@ -1,0 +1,14 @@
+name: 高德地图打车签到
+desc: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Gddt.png
+
+cron:
+  script:
+    - name: "高德地图打车签到_107"
+      cron: "2 0 * * *"
+      timeout: 60
+
+script-providers:
+  "高德地图打车签到_107":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+    interval: 86400
