@@ -2,25 +2,13 @@ name: "捷停车签到"
 desc: "活动入口：捷停车APP-停车币签到
 签到规则：连签奖励，首日 6 停车币、次日 7 停车币，以此类推7天封顶
 活动奖励：停车币可用于兑换停车券，比例 1000:1"
-
-http:
-
-  mitm:
-    - "sytgate.jslife.com.cn"
-
-  script:
-
-    - match: ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info
-      name: "获取捷停车userId_11"
-      type: request
-      require-body: true
-      max-size: 0
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Jtc.png
 
 cron:
   script:
 
     - name: "获取捷停车userId_11"
-      cron: "49 0 * * *"
+      cron: "20 20 * * *"
       timeout: 60
 
 script-providers:
