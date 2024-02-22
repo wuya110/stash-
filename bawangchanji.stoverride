@@ -1,18 +1,8 @@
 name: "霸王茶姬小程序签到"
-desc: "打开小程序->进入我的页面，若提示获取Cookie成功则可以使用该脚本"
+desc: 
+icon: https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
 
-http:
 
-  mitm:
-    - "qmwebapi.qmai.cn"
-    - "webapi.qmai.cn"
-
-  script:
-
-    - match: ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info
-      name: "🥤霸王茶姬小程序签到_16"
-      type: request
-      timeout: 10
 
 cron:
   script:
