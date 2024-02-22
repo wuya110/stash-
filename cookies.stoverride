@@ -1,0 +1,434 @@
+name: |-
+  🌸Sakura樱花交流会
+desc: |-
+  常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
+author: |-
+  @Sliverkiss
+icon: |-
+  https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/sakura.png
+homepage: |-
+  https://t.me/sliverkiss
+
+http:
+
+  mitm:
+    - "music.163.com"
+    - "mvip.midea.cn"
+    - "apph5.manmanbuy.com"
+    - "app.hbooker.com"
+    - "wx.10099.com.cn"
+    - "api.weibo.cn"
+    - "passport.iqiyi.com"
+    - "apis.folidaymall.com"
+    - "game.dominos.com.cn"
+    - "yunbusiness.ccb.com"
+    - "i.meituan.com"
+    - "crm.nestlechinese.com"
+    - "testflight.apple.com"
+    - "sweixin.hisense.com"
+    - "cps.hisense.com"
+    - "c.tieba.baidu.com"
+    - "tiebac.baidu.com"
+    - "user-api.smzdm.com"
+    - "auth.alipan.com"
+    - "auth.aliyundrive.com"
+    - "zxcstxt.com"
+    - "api.hellobike.com"
+    - "mall.meituan.com"
+    - "sytgate.jslife.com.cn"
+    - "hweb-personalcenter.huazhu.com"
+    - "dm.yeemiao.com"
+    - "api.tuhu.cn"
+    - "qmwebapi.qmai.cn"
+    - "webapi.qmai.cn"
+    - "api.cloud.189.cn"
+    - "api-ipv6.app.acfun.cn"
+    - "*.acfun.cn"
+    - "*.app.acfun.cn"
+    - "h5.if.qidian.com"
+    - "*.xbiao.com"
+    - "miniapp.yaduo.com"
+    - "yuchen.tonghuaios.com"
+    - "ios.songshuyouxi.com"
+    - "as.hypergryph.com"
+    - "zonai.skland.com"
+    - "bbs-api.mihoyo.com"
+    - "api-takumi.mihoyo.com"
+    - "example.com"
+    - "*.amap.com"
+
+  script:
+# 获取网易云音乐人签到需要的各项参数
+    - match: ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes
+      name: "cookie_7"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取美的会员签到需要的各项参数
+    - match: ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo
+      name: "midea_9"
+      type: request
+      timeout: 60
+
+# 5 0 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, tag=慢慢买_每日签到, enabled=true
+    - match: ^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx)
+      name: "manmanbuy_checkin_11"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取刺猬猫签到需要的各项参数
+    - match: ^https:\/\/app\.hbooker\.com\/task\/get_all_task_list
+      name: "hbooker_13"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取ChinaBroadnet需要的各项参数
+    - match: https://wx.10099.com.cn/contact-web/api/busi/qryUserInfo
+      name: "ChinaBroadnet.cookie_15"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取微博超话签到需要的各项参数
+    - match: ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button)
+      name: "weibotalk.cookie_17"
+      type: request
+      timeout: 60
+
+# 获取爱奇艺签到需要的各项参数
+    - match: ^https:\/\/passport\.iqiyi\.com\/apis\/user\/
+      name: "iQIYI_19"
+      type: request
+      timeout: 60
+
+# 获取托迈酷客签到需要的各项参数
+    - match: ^https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount
+      name: "ThomasCook_21"
+      type: request
+      timeout: 60
+
+# 获取达乐美披萨需要的各项参数
+    - match: ^https:\/\/game\.dominos\.com\.cn\/loong\/game\/gameDone
+      name: "dlm_23"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取建行生活签到需要的各项参数
+    - match: ^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin)
+      name: "jhsh_checkIn_25"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 使用方法2：美团APP -> 首页 -> 红包签到 -> 手动签到一次
+    - match: ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
+      name: "meituan.cookie_27"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取雀巢会员俱乐部签到需要的各项参数
+    - match: ^https:\/\/crm.nestlechinese.com\/openapi\/pointsservice\/api\/Points\/getuserbalance
+      name: "nestle_29"
+      type: request
+      timeout: 60
+
+# 获取自动加入 TestFlight需要的各项参数
+    - match: ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$
+      name: "TF_appIds_31"
+      type: request
+      timeout: 60
+
+# 获取海信爱家签到需要的各项参数
+    - match: ^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember
+      name: "Hisense_33"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/cps\.hisense\.com\/customerAth\/activity-manage\/activityUser\/(participate|noLoginCheck)
+      name: "Hisense_33"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 百度贴吧每日自动签到
+    - match: ^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login
+      name: "tieba_signin_36"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig
+      name: "tieba_signin_36"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo
+      name: "tieba_signin_36"
+      type: request
+      timeout: 60
+
+# 获取什么值得买任务需要的各项参数
+    - match: ^https?:\/\/user-api\.smzdm\.com\/checkin$
+      name: "smzdm_daily_40"
+      type: request
+      timeout: 60
+
+# 获取阿里云盘签到需要的各项参数
+    - match: ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token
+      name: "aliyun_42"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取知轩藏书签到需要的各项参数
+    - match: ^https:\/\/zxcstxt\.com\/user\/
+      name: "zhixuan_44"
+      type: request
+      timeout: 60
+
+# 获取哈啰单车奖励金签到需要的各项参数
+    - match: ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo
+      name: "hldc_46"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取美团买菜任务需要的各项参数
+    - match: ^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?
+      name: "mall.meituan.cookie_48"
+      type: request
+      timeout: 60
+
+# 获取捷停车签到需要的各项参数
+    - match: ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info
+      name: "jparking_sign_50"
+      type: request
+      require-body: true
+      timeout: 60
+
+# 获取华住会签到需要的各项参数
+    - match: ^https?:\/\/hweb-personalcenter\.huazhu\.com\/login\/autoLogin$
+      name: "hzh_52"
+      type: request
+      timeout: 60
+
+# 获取小豆苗签到需要的各项参数
+    - match: ^https?:\/\/dm\.yeemiao\.com\/common\/newmsg\/getUnReadTotalNum$
+      name: "xdm_54"
+      type: request
+      timeout: 60
+
+# 获取途虎养车签到需要的各项参数
+    - match: https://api.tuhu.cn/User/GetInternalCenterInfo
+      name: "Tuhyche_56"
+      type: request
+      timeout: 60
+
+# 获取霸王茶姬签到需要的各项参数
+    - match: ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info
+      name: "bwcj_58"
+      type: request
+      timeout: 60
+
+# 获取天翼云盘签到需要的各项参数
+    - match: ^https:\/\/api\.cloud\.189\.cn\/mkt\/userSign\.action?
+      name: "ty.cookie_60"
+      type: request
+      timeout: 60
+
+# 获取AcFun签到需要的各项参数
+    - match: ^https?:\/\/api-ipv6\.app\.acfun\.cn\/rest\/app\/user\/(signIn|hasSignedIn|getSignInInfos)
+      name: "acfun.cookie_62"
+      type: request
+      timeout: 60
+
+# 获取起点读书任务需要的各项参数
+    - match: https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch
+      name: "qidian.cookie_64"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/mainPage
+      name: "qidian.taskId_65"
+      type: response
+      require-body: true
+      timeout: 60
+
+# 获取腕表之家签到需要的各项参数
+    - match: ^https:\/\/\w+\.xbiao\.com\/apps\/\w+/.+\/home\/center/$
+      name: "wbzj_67"
+      type: request
+      timeout: 60
+
+# 获取亚朵酒店签到需要的各项参数
+    - match: ^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+
+      name: "adjd_69"
+      type: request
+      timeout: 60
+
+# 获取雨晨ios签到需要的各项参数
+    - match: ^https:\/\/yuchen.tonghuaios.com\/users\?.+
+      name: "yuchenios_71"
+      type: request
+      timeout: 60
+
+# 获取松鼠ios签到需要的各项参数
+    - match: ^https\:\/\/ios\.songshuyouxi\.com\/user
+      name: "sxios_73"
+      type: request
+      timeout: 60
+
+# 获取森空岛签到需要的各项参数
+    - match: ^https://as.hypergryph.com/user/info/v1/basic
+      name: "skland.token_75"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https://zonai.skland.com/api/v1/game
+      name: "skland.token_75"
+      type: request
+      timeout: 60
+
+# 获取米游币任务功能需要的 cookie
+    - match: ^https://bbs-api.mihoyo.com/apihub/api/getGameList
+      name: "mihoyobbs.cookie_78"
+      type: request
+      timeout: 60
+
+# 获取签到功能需要的 cookie
+    - match: ^https://api-takumi.mihoyo.com/binding/api/getUserGameRoles
+      name: "mihoyobbs.cookie_78"
+      type: request
+      timeout: 60
+
+# 脚本设置自定义
+    - match: ^https://example.com/?
+      name: "mihoyobbs.config_82"
+      type: request
+      timeout: 60
+
+# 获取高德地图签到需要的各项参数
+    - match: ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=)
+      name: "ampDache_84"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "cookie_7":
+    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
+    interval: 86400
+  "midea_9":
+    url: https://gist.githubusercontent.com/Sliverkiss/3c0239a09cbe381c572a826a5caf5621/raw/midea.js
+    interval: 86400
+  "manmanbuy_checkin_11":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
+    interval: 86400
+  "hbooker_13":
+    url: https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
+    interval: 86400
+  "ChinaBroadnet.cookie_15":
+    url: https://github.com/wuhuhuuuu/study/raw/main/Scripts/ChinaBroadnet/ChinaBroadnet.cookie.js
+    interval: 86400
+  "weibotalk.cookie_17":
+    url: https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
+    interval: 86400
+  "iQIYI_19":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+    interval: 86400
+  "ThomasCook_21":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
+    interval: 86400
+  "dlm_23":
+    url: https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+    interval: 86400
+  "jhsh_checkIn_25":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
+    interval: 86400
+  "meituan.cookie_27":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+    interval: 86400
+  "nestle_29":
+    url: https://gist.githubusercontent.com/Sliverkiss/f533ada8d658a0cbbe4b2e791c3b0ac8/raw/be3d9b74fe1cde69e6d39b599e5526110c996958/nestle.js
+    interval: 86400
+  "TF_appIds_31":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js
+    interval: 86400
+  "Hisense_33":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
+    interval: 86400
+  "tieba_signin_36":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+    interval: 86400
+  "smzdm_daily_40":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
+    interval: 86400
+  "aliyun_42":
+    url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+    interval: 86400
+  "zhixuan_44":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js
+    interval: 86400
+  "hldc_46":
+    url: https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js
+    interval: 86400
+  "mall.meituan.cookie_48":
+    url: https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
+    interval: 86400
+  "jparking_sign_50":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js
+    interval: 86400
+  "hzh_52":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/hzh.js
+    interval: 86400
+  "xdm_54":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/xdm.js
+    interval: 86400
+  "Tuhyche_56":
+    url: https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+    interval: 86400
+  "bwcj_58":
+    url: https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js
+    interval: 86400
+  "ty.cookie_60":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/ty.cookie.js
+    interval: 86400
+  "acfun.cookie_62":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/acfun.cookie.js
+    interval: 86400
+  "qidian.cookie_64":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.cookie.js
+    interval: 86400
+  "qidian.taskId_65":
+    url: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.taskId.js
+    interval: 86400
+  "wbzj_67":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/wbzj.js
+    interval: 86400
+  "adjd_69":
+    url: https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/e399523e428f3c173ec4b95c892725006c3128ff/adjd.js
+    interval: 86400
+  "yuchenios_71":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js
+    interval: 86400
+  "sxios_73":
+    url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/sxios.js
+    interval: 86400
+  "skland.token_75":
+    url: https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland.token.js
+    interval: 86400
+  "mihoyobbs.cookie_78":
+    url: https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.cookie.js
+    interval: 86400
+  "mihoyobbs.config_82":
+    url: https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.config.js
+    interval: 86400
+  "ampDache_84":
+    url: https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+    interval: 86400
