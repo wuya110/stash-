@@ -1,33 +1,17 @@
 name: "亚朵酒店app 签到、抽奖"
 desc: "打开亚朵酒店app手动签到一次获取cookie "
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Adjd.png
 
-http:
-
-  mitm:
-    - "miniapp.yaduo.com"
-
-  script:
-
-    - match: ^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+
-      name: "亚朵酒店app_13"
-      type: request
-      timeout: 10
 
 cron:
   script:
 
     - name: "亚朵酒店app_13"
-      cron: "0 30 7 * * *"
+      cron: "40 20 * * *"
       timeout: 300
-
-    - name: "dingdong_checkin_28"
-      cron: "8 0 * * *"
-      timeout: 60
 
 script-providers:
   "亚朵酒店app_13":
     url: https://raw.githubusercontent.com/Sliverkiss/helloworld/master/Study/adjd.js
     interval: 86400
-  "dingdong_checkin_28":
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
-    interval: 86400
+
