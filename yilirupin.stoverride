@@ -1,0 +1,14 @@
+name: 伊利乳品签到
+desc: 
+icon: https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png
+
+cron:
+  script:
+    - name: "伊利乳品签到_117"
+      cron: "57 20 * * *"
+      timeout: 60
+
+script-providers:
+  "伊利乳品签到_117":
+    url: https://raw.githubusercontent.com/xxx/xxx/main/yili.js
+    interval: 86400
