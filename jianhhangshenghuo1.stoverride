@@ -1,0 +1,14 @@
+name: 建行生活签到
+desc: 
+icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg
+
+cron:
+  script:
+    - name: "建行生活签到_27"
+      cron: "30 7 * * *"
+      timeout: 60
+
+script-providers:
+  "建行生活签到_27":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
+    interval: 86400
