@@ -1,0 +1,14 @@
+name: Bilibili每日签到
+desc: 
+icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bilibili(4).png
+
+cron:
+  script:
+    - name: "Bilibili每日签到_39"
+      cron: "12 0 * * *"
+      timeout: 60
+
+script-providers:
+  "Bilibili每日签到_39":
+    url: https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+    interval: 86400
