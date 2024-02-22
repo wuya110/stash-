@@ -1,0 +1,14 @@
+name: 巴奴毛肚火锅签到
+desc: 
+icon: 
+
+cron:
+  script:
+    - name: "巴奴毛肚火锅签到_31"
+      cron: "13 0 * * *"
+      timeout: 60
+
+script-providers:
+  "巴奴毛肚火锅签到_31":
+    url: https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/bnmdhg_wx.js
+    interval: 86400
