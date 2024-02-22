@@ -5,7 +5,7 @@ icon: https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0905.jpeg
 cron:
   script:
     - name: "途虎养车积分签到_83"
-      cron: "40 8 * * *"
+      cron: "9 0 * * *"
       timeout: 60
 
 script-providers:
