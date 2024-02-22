@@ -1,0 +1,14 @@
+name: 百度贴吧签到
+desc: 
+icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png
+
+cron:
+  script:
+    - name: "百度贴吧签到_65"
+      cron: "30 10 * * *"
+      timeout: 60
+
+script-providers:
+  "百度贴吧签到_65":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+    interval: 86400
