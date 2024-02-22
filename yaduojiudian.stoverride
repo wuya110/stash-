@@ -7,7 +7,7 @@ cron:
   script:
 
     - name: "亚朵酒店app_13"
-      cron: "40 20 * * *"
+      cron: "11 0 * * *"
       timeout: 300
 
 script-providers:
