@@ -1,0 +1,14 @@
+name: 顺丰速运签到
+desc: 
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/sfexpress.png
+
+cron:
+  script:
+    - name: "顺丰速运签到_115"
+      cron: "20 0 * * *"
+      timeout: 60
+
+script-providers:
+  "顺丰速运签到_115":
+    url: https://raw.githubusercontent.com/xxx/xxx/main/sf.js
+    interval: 86400
