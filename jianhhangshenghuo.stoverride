@@ -1,11 +1,11 @@
 name: 慢慢买
 desc: 
-icon: 
+icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanmai.png
 
 cron:
   script:
     - name: "慢慢买_9"
-      cron: "46 1 * * ?"
+      cron: "15 20 * * *"
       timeout: 60
 
 script-providers:
