@@ -1,0 +1,14 @@
+name: 夸克网盘签到
+desc: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Quark.png
+
+cron:
+  script:
+    - name: "夸克网盘签到_51"
+      cron: "10 0 * * *"
+      timeout: 60
+
+script-providers:
+  "夸克网盘签到_51":
+    url: https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js
+    interval: 86400
