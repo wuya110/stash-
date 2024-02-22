@@ -7,7 +7,7 @@ cron:
   script:
 
     - name: "沪上阿姨_17"
-      cron: "30 9 * * *"
+      cron: "6 0 * * *"
       timeout: 300
 
 script-providers:
