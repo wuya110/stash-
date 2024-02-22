@@ -1,0 +1,14 @@
+name: 达美乐披萨签到
+desc: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Dlm.png
+
+cron:
+  script:
+    - name: "达美乐披萨签到_25"
+      cron: "12 0 * * *"
+      timeout: 60
+
+script-providers:
+  "达美乐披萨签到_25":
+    url: https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+    interval: 86400
