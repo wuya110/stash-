@@ -5,7 +5,7 @@ icon: https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png
 cron:
   script:
     - name: "伊利乳品签到_117"
-      cron: "57 20 * * *"
+      cron: "12 0 * * *"
       timeout: 60
 
 script-providers:
