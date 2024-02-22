@@ -5,7 +5,7 @@ icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/scri
 cron:
   script:
     - name: "百度贴吧签到_65"
-      cron: "30 10 * * *"
+      cron: "0 0 * * *"
       timeout: 60
 
 script-providers:
