@@ -1,6 +1,6 @@
 name: 阿里云任务
 desc: 
-icon: 
+icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png
 
 cron:
   script:
