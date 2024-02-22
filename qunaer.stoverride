@@ -1,0 +1,14 @@
+name: 去哪儿签到
+desc: 
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/qunar.png
+
+cron:
+  script:
+    - name: "去哪儿签到_119"
+      cron: "0 8 * * *"
+      timeout: 60
+
+script-providers:
+  "去哪儿签到_119":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.js
+    interval: 86400
