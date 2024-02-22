@@ -1,0 +1,14 @@
+name: 海底捞签到
+desc: 
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/haidilao.png
+
+cron:
+  script:
+    - name: "海底捞签到_59"
+      cron: "14 0 * * *"
+      timeout: 60
+
+script-providers:
+  "海底捞签到_59":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
+    interval: 86400
