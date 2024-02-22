@@ -1,13 +1,14 @@
-name: "阿里云盘签到"
-desc: "进入阿里云盘可直接获取cookie "
+name: 阿里云任务
+desc: 
+icon: 
 
 cron:
   script:
     - name: "阿里云任务_69"
-      cron: "23 19 * * *"
+      cron: "30 19 * * *"
       timeout: 60
-      script-path: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
-      script-update-interval: 86400
 
-
-
+script-providers:
+  "阿里云任务_69":
+    url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+    interval: 86400
