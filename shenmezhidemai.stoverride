@@ -1,0 +1,14 @@
+name: 什么值得买
+desc: 
+icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm.png
+
+cron:
+  script:
+    - name: "什么值得买_67"
+      cron: "51 19 * * *"
+      timeout: 60
+
+script-providers:
+  "什么值得买_67":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
+    interval: 86400
