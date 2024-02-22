@@ -1,17 +1,7 @@
 name: "微信小程序 沪上阿姨 签到"
 desc: "打开小程序->我的，若提示获取Cookie成功则可以使用该脚本"
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hsay.png
 
-http:
-
-  mitm:
-    - "webapi.qmai.cn"
-
-  script:
-
-    - match: ^https:\/\/webapi.qmai.cn\/web\/catering\/crm\/points-info
-      name: "沪上阿姨_17"
-      type: request
-      timeout: 10
 
 cron:
   script:
@@ -20,14 +10,7 @@ cron:
       cron: "30 9 * * *"
       timeout: 300
 
-    - name: "dingdong_checkin_29"
-      cron: "8 0 * * *"
-      timeout: 60
-
 script-providers:
   "沪上阿姨_17":
     url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/hsay.js
-    interval: 86400
-  "dingdong_checkin_29":
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
     interval: 86400
