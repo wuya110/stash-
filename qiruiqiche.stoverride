@@ -1,0 +1,14 @@
+name: 奇瑞汽车签到
+desc: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Chery.png
+
+cron:
+  script:
+    - name: "奇瑞汽车签到_33"
+      cron: "9 0 * * *"
+      timeout: 60
+
+script-providers:
+  "奇瑞汽车签到_33":
+    url: https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/chery.js
+    interval: 86400
