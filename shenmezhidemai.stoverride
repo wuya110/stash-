@@ -5,7 +5,7 @@ icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/scri
 cron:
   script:
     - name: "什么值得买_67"
-      cron: "54 19 * * *"
+      cron: "8 0 * * *"
       timeout: 60
 
 script-providers:
