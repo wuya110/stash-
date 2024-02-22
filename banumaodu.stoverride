@@ -1,6 +1,6 @@
 name: 巴奴毛肚火锅签到
 desc: 
-icon: 
+icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Bnmdhg.png
 
 cron:
   script:
