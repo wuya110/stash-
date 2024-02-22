@@ -1,21 +1,14 @@
-name: "美团签到"
-desc: "美团APP -> 首页 -> 红包签到 -> 手动签到一次"
+name: 美团签到
+desc: 
+icon: https://qxnav.com/rules/QuantumultX/img/meituan.png
 
-http:
-
-  mitm:
-    - "i.meituan.com"
-
+cron:
   script:
-# 使用方法2：美团APP -> 首页 -> 红包签到 -> 手动签到一次
-    - match: ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
-      name: "meituan.cookie_4"
-      type: request
-      require-body: true
-      max-size: -1
+    - name: "美团签到_43"
+      cron: "25 20 * * *"
       timeout: 60
 
 script-providers:
-  "meituan.cookie_4":
-    url: https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+  "美团签到_43":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js
     interval: 86400
