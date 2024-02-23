@@ -1,6 +1,7 @@
 name: 建行生活签到
 desc: 
 icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg
+category: 签到
 
 cron:
   script:
