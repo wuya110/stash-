@@ -1,6 +1,7 @@
 name: 美团买菜任务
 desc: 
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Mtmc.png
+category: 签到
 
 cron:
   script:
