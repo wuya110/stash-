@@ -1,6 +1,8 @@
 name: Bilibili每日签到
 desc: 
 icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bilibili(4).png
+category: 签到
+
 
 cron:
   script:
