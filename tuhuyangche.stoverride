@@ -1,6 +1,7 @@
 name: 途虎养车积分签到
 desc: 
 icon: https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0905.jpeg
+category: 签到
 
 cron:
   script:
