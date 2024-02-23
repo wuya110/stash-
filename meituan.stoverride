@@ -1,6 +1,7 @@
 name: 美团签到
 desc: 
 icon: https://qxnav.com/rules/QuantumultX/img/meituan.png
+category: 签到
 
 cron:
   script:
