@@ -1,6 +1,7 @@
 name: 腕表之家签到
 desc: 
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Wbzj.png
+category: 签到
 
 cron:
   script:
