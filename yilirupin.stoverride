@@ -1,6 +1,7 @@
 name: 伊利乳品签到
 desc: 
 icon: https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png
+category: 签到
 
 cron:
   script:
