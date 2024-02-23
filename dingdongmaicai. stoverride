@@ -1,6 +1,7 @@
 name: "叮咚买菜"
 desc: "叮咚买菜自动签到"
 icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/mcdd.png
+category: 签到
 
 cron:
   script:
