@@ -1,6 +1,7 @@
 name: 达美乐披萨签到
-desc: 
+desc: 需要boxjs配合
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Dlm.png
+category: 签到
 
 cron:
   script:
