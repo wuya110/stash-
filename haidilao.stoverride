@@ -1,6 +1,7 @@
 name: 海底捞签到
-desc: 
+desc: 需要boxjs配合
 icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/haidilao.png
+category: 签到
 
 cron:
   script:
