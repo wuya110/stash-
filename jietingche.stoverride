@@ -3,6 +3,7 @@ desc: "活动入口：捷停车APP-停车币签到
 签到规则：连签奖励，首日 6 停车币、次日 7 停车币，以此类推7天封顶
 活动奖励：停车币可用于兑换停车券，比例 1000:1"
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Jtc.png
+category: 签到
 
 cron:
   script:
