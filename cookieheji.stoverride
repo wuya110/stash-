@@ -2,6 +2,7 @@ name: "fmz200获取cookie合集"
 desc: "整合大部分获取cookie的配置stash版，获取cookie后禁用该配置"
 author: "fmz200"
 date: "2023-12-02 19:35:00"
+category: cookie 
 
 http:
 
