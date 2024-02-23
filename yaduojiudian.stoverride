@@ -1,6 +1,7 @@
 name: "亚朵酒店app 签到、抽奖"
 desc: "打开亚朵酒店app手动签到一次获取cookie "
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Adjd.png
+category: 签到
 
 
 cron:
