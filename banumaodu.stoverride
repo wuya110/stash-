@@ -1,6 +1,7 @@
 name: 巴奴毛肚火锅签到
-desc: 
+desc: 需要boxjs配合
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Bnmdhg.png
+category: 签到
 
 cron:
   script:
