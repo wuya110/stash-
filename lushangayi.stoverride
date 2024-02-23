@@ -1,6 +1,7 @@
 name: "微信小程序 沪上阿姨 签到"
 desc: "打开小程序->我的，若提示获取Cookie成功则可以使用该脚本"
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hsay.png
+category: 签到
 
 
 cron:
