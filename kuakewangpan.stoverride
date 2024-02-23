@@ -1,6 +1,7 @@
 name: 夸克网盘签到
-desc: 
+desc: 需要boxjs配合
 icon: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Quark.png
+category: 签到
 
 cron:
   script:
