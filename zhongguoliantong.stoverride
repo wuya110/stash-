@@ -1,0 +1,15 @@
+name: 联通签到
+desc: 中国联通
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png
+category: 签到
+
+cron:
+  script:
+    - name: "联通签到"
+      cron: "7 0 * * *"
+      timeout: 60
+
+script-providers:
+  "联通签到":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
+    interval: 86400
