@@ -11,5 +11,5 @@ cron:
 
 script-providers:
   "顺丰速运签到_115":
-    url: https://raw.githubusercontent.com/xxx/xxx/main/sf.js
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
     interval: 86400
