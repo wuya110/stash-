@@ -1,0 +1,19 @@
+name: |-
+  东东健康社区收能量
+desc: |-
+  东东健康社区收能量
+icon: |-
+  https://raw.githubusercontent.com/58xinian/icon/master/jd.png
+category: |-
+  签到
+
+cron:
+  script:
+    - name: "东东健康社区收能量_1"
+      cron: "5-45/20 * * * *"
+      timeout: 60
+
+script-providers:
+  "东东健康社区收能量_1":
+    url: https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_health_collect.js
+    interval: 86400
