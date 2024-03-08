@@ -6,10 +6,10 @@ category: 签到
 cron:
   script:
     - name: "伊利乳品签到_117"
-      cron: "12 0 * * *"
+      cron: "3 0 * * *"
       timeout: 60
 
 script-providers:
   "伊利乳品签到_117":
-    url: https://raw.githubusercontent.com/xxx/xxx/main/yili.js
+    url: https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js
     interval: 86400
