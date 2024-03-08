@@ -13,6 +13,6 @@ cron:
 
 script-providers:
   "亚朵酒店app_13":
-    url: https://raw.githubusercontent.com/Sliverkiss/helloworld/master/Study/adjd.js
+    url: https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/e399523e428f3c173ec4b95c892725006c3128ff/adjd.js
     interval: 86400
 
