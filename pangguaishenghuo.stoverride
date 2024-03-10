@@ -4,8 +4,7 @@ desc: |-
   乖胖生活
 icon: |-
   https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/pgsh.png
-category: |-
-  签到 
+category: 签到
 
 cron:
   script:
