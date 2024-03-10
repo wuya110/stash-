@@ -1,0 +1,19 @@
+name: |-
+  晓晓优选
+desc: |-
+   晓晓优选 每天200+能量 能量兑换券，外卖返利
+icon: |-
+  https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg
+category: |-
+  签到
+
+cron:
+  script:
+
+    - name: "xxyx_13"
+      cron: "1 0 * * *"
+      timeout: 60
+script-providers:
+  "xxyx_13":
+    url: https://gist.githubusercontent.com/Sliverkiss/991a81be1fc8cf2a1937432be68f5521/raw/xxyx.js
+    interval: 86400
