@@ -1,0 +1,19 @@
+name: |-
+  乖胖生活
+desc: |-
+  乖胖生活
+icon: |-
+  https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/pgsh.png
+category: |-
+  签到 
+
+cron:
+  script:
+    - name: "胖乖生活"
+      cron: "3 0 * * *"
+      timeout: 60
+
+script-providers:
+  "胖乖生活":
+    url: https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js
+    interval: 86400
